@@ -15,7 +15,9 @@ As an exercise in problem solving and using dplyr, we will split into groups to 
 
 2) Nick + Marc
 
-3) Pat + Charlie + Kaitlin
+3) Pat + Kaitlin
+
+4) Marian + Charlie
 
 ###Download repo
 
