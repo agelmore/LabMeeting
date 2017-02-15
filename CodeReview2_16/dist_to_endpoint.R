@@ -1,12 +1,9 @@
-##Code to summarize some other beta diversity scripts. Creating a figure similar to Figure 2a in Baxter et al 2014. 
-
 #Calculate the following distances by thetaYC for each donor then summarize in dot plot with standard error
 
-# Inoculum vs D1
 # Inoculum vs endpoint
-# D1 vs endpoint
 
-#change to cloned repo
+
+#change to local repo
 setwd("/users/amanda/documents/Schloss/Lab meeting/LabMeeting/CodeReview2_16/")
 
 source('functions.R')
