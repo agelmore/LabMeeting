@@ -59,6 +59,8 @@ git clone https://github.com/agelmore/LabMeeting.git
 
 3) Produce a plot (dotplot, barplot, boxplot) showing average thetaYC in each donor
 
+4) **Winner is the first team to produce a plot I like**
+
 4) If time, also calculate:
 
 	+ average distance donor to day 1
