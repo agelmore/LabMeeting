@@ -49,6 +49,20 @@ mean.end.donor <- dist.end %>%
   separate(value, c("mean.value", "error.value"), "_")
 
 
+#Nick's code
+dist.col %>% 
+   filter(label %in% donor.id & comparison %in% end.id) %>%
+   separate(label, c('source','mouse','x1')) %>% 
+   separate(comparison, c('end','mouse1','x4','x2','x3')) %>% 
+   filter(source == end) %>% 
+   ggplot(aes(x=1, y=thetayc, color=source)) +
+     stat_summary(fun.y = mean,
+                  fun.ymin = function(x) mean(x) - sd(x), 
+                  fun.ymax = function(x) mean(x) + sd(x), 
+                  geom = "pointrange",
+                  position = position_dodge(1)) +
+                  ylim(range(0,1))
+
 
 #Plot distance in each donor
 
@@ -69,7 +83,7 @@ ggplot(mean.end.donor, aes(x=calc, y=mean.value, color=donor)) +
   ylim(range(0,1))+
   scale_color_manual(values=donor.palette)+
   ggtitle("Change over time")+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position='none') 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 
 
 
